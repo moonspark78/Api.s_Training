@@ -16,7 +16,11 @@ function App() {
   },[])
   return (
     <div className="App">
-     
+      {
+        cryptoData.map((crypto) =>(
+          <img alt={crypto.name} src={crypto.image}/>
+        ))
+      }
     </div>
   );
 }
