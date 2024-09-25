@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Test.css"
 
 const Test = () => {
+    const [objData, setObjData] = useState({})
 
 
-    const getInputs = ( value ) =>{
-        console.log(value);
-        
+    const getInputs = ( value, name ) =>{
+        let data = {[name]: value}
+        setObjData({...objData, ...data})
     }; 
+    console.log(objData);
 
 
 
