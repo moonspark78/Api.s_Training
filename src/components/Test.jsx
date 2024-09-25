@@ -9,7 +9,10 @@ const Test = () => {
         let data = {[name]: value}
         setObjData({...objData, ...data})
     }; 
-    console.log(objData);
+
+    const submit = () =>{
+        console.log(objData);
+    }
 
 
 
@@ -39,7 +42,7 @@ const Test = () => {
             type='date'
             onChange={(event) => getInputs(event.target.value, event.target.name)}
         />
-        <button>Submit</button>
+        <button onClick={submit}>Submit</button>
     </div>
   )
 }
